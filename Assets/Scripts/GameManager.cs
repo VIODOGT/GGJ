@@ -39,6 +39,9 @@ public class GameManager : MonoBehaviour
         }
     }
 
-
+    void FinishGame()
+    {
+        print("oyun bitti");
+    }
 
 }
