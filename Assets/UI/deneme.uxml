@@ -1,0 +1,5 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <ui:VisualElement style="height: 154px; bottom: auto; top: 20%; width: 400px; left: 30%;">
+        <ui:TextField picking-mode="Ignore" label="Interact the Root Star(Yellow)" value="filler text" style="display: flex; opacity: 1; -unity-font: none; -unity-font-style: bold; color: rgba(255, 255, 255, 255); -unity-text-align: middle-center; -unity-text-outline-color: rgba(255, 255, 255, 255); height: 183px; width: 453px; font-size: 30px; -unity-text-outline-width: 0;" />
+    </ui:VisualElement>
+</ui:UXML>
