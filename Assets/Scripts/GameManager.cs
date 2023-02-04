@@ -6,11 +6,28 @@ public class GameManager : MonoBehaviour
 {
     [SerializeField] GameObject Asteroid;
     [SerializeField] Transform parentObject;
+    public int currentStar;
+    public static GameManager Instance;
+    private MainStarController mainstar;
+
+    private void Awake()
+    {
+        if(Instance == null)
+        {
+            Instance = this;
+        }
+    }
 
 
     private void Start()
     {
-        SpawnRandomAsteroid();
+        mainstar = GetComponent<MainStarController>();
+
+        SpawnRandomAsteroid();     
+    }
+
+    private void Update()
+    {
     }
 
     void SpawnRandomAsteroid()
@@ -21,4 +38,7 @@ public class GameManager : MonoBehaviour
             Instantiate(Asteroid, spawnPosition, Quaternion.identity, parentObject);
         }
     }
+
+
+
 }

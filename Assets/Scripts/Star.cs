@@ -13,6 +13,7 @@ public class Star : MonoBehaviour
     [SerializeField] private ParticleSystem pS3;
     [HideInInspector] public float loadingPoint;
     private MeshRenderer renderer;
+    public bool isInteracted;
 
     private void Start()
     {
@@ -31,10 +32,12 @@ public class Star : MonoBehaviour
         if (state == StarState.Interacted)
         {
             GetComponent<MeshRenderer>().material = materials[1];
+            isInteracted = true;
         }
         else
         {
             GetComponent<MeshRenderer>().material = materials[0];
+            isInteracted = false;
         }
     }
 

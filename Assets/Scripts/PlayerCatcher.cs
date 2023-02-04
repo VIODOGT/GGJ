@@ -33,6 +33,7 @@ public class PlayerCatcher : MonoBehaviour
                         InteractImg.fillAmount = 0f;                          
                         Camera.main.GetComponent<LRRender>().SetUpLine(this.transform);    // Line çizme metodu
                         star.PlayParticle();                                  // Particleları oynatma metodu
+                        GameManager.Instance.currentStar++;
                     }
                 }
                 else if (Input.GetKeyUp(KeyCode.E))                           // Çember dolmadan elini E'den çekerse 0'lanıyor

@@ -18,15 +18,8 @@ public class LRRender : MonoBehaviour     // bunu da kurcalama
     {
         Array.Resize(ref points, points.Length + 1);
         points[points.Length - 1] = point;
-        if (points[0] == points[points.Length - 1])
-        {
-            Transform[] prevPoints = points;
-            lrController.SetUpLine(prevPoints);
-            Array.Resize(ref points, points.Length + 1);
-            //points[points.Length - 1] = point;
+        //points[points.Length - 1] = point;
 
-        }
-        
         lrController.SetUpLine(points);
     }
 }
