@@ -12,10 +12,13 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
     private MainStarController mainstar;
     [SerializeField] private GameObject TurnRootPanel;
+    [SerializeField] GameObject finishPanel;
+    [SerializeField]public TimeScaleFader timeScaleFader;
 
     private void Awake()
     {
-        if(Instance == null)
+        timeScaleFader = GetComponent<TimeScaleFader>();
+        if (Instance == null)
         {
             Instance = this;
         }
@@ -48,6 +51,7 @@ public class GameManager : MonoBehaviour
         if (currentStar == 10)
         {
             OpenTurnRootPanel();
+
         }
     }
 
@@ -60,6 +64,12 @@ public class GameManager : MonoBehaviour
     {
         TurnRootPanel.SetActive(false);
 
+    }
+
+    public void openFinishPanel()
+    {
+        finishPanel.SetActive(true);
+        timeScaleFader.FadeOut();
     }
 
 }

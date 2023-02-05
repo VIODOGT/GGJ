@@ -9,10 +9,17 @@ public class LRRender : MonoBehaviour     // bunu da kurcalama
 {
     public Transform[] points;
     public LRController lrController;
+    public bool isFinish;
+    
+
+
     void Start()
     {
+        
         lrController.SetUpLine(points);
     }
+
+
 
     public void SetUpLine(Transform point)
     {
@@ -20,8 +27,15 @@ public class LRRender : MonoBehaviour     // bunu da kurcalama
         points[points.Length - 1] = point;
         if (points[0] == points[points.Length - 1] && points.Length > 5)
         {
-            Time.timeScale = 0;
+            
             GameManager.Instance.CloseTurnRootPanel();
+            isFinish = true;
+            GameManager.Instance.openFinishPanel();
+
+        }
+        else
+        {
+            isFinish = false;
         }
         lrController.SetUpLine(points);
     }

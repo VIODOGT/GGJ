@@ -13,6 +13,7 @@ public class UIStar : MonoBehaviour
     [SerializeField] GameObject inGamePausePanel;
     [SerializeField] GameObject counterPanel;
 
+
     void Start()
     {
         text.text = "STAR 0 / 10";
@@ -50,6 +51,8 @@ public class UIStar : MonoBehaviour
     {
         Application.Quit();
     }
+
+   
 
 
 }
